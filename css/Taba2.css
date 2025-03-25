@@ -1,0 +1,352 @@
+:root {
+    --main-color: #19c8fa;
+
+}
+
+/* ---------------------------start global roles--------------------------- */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100vh;
+    position: relative;
+    font-family: "Cairo", sans-serif;
+    background: linear-gradient(to bottom, #00338D, #B1B2FF);
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* ---------------------------end global roles--------------------------- */
+
+div.grid {
+    position: absolute;
+    right: 0;
+    width: 45%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(8, 12.5%);
+    grid-template-rows: repeat(5, 20%);
+    z-index: 1;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    grid-column: 1 / span 7;
+
+}
+
+header .container {
+    padding-right: 0;
+    width: 100%;
+    padding-left: 5%;
+}
+
+header .container nav ul {
+    font-size: smaller;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.side-bar {
+    height: 100%;
+    grid-row: 1 / span 5;
+    grid-column: 8 / 9;
+}
+
+.side-bar .container {
+    padding-right: 0;
+    padding-left: 35%;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+
+
+}
+
+.container .elements {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.side-bar .container .elements .blur {
+    position: absolute;
+    background-color: white;
+    opacity: 10%;
+    width: 100%;
+    height: 100%;
+    filter: blur(0.8px);
+    z-index: -1;
+}
+
+.side-bar .container .elements .first-half {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.side-bar .elements .links {
+    padding-top: 45%;
+}
+
+.side-bar .elements .links .icon {
+    width: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+
+.elements .links .icon hr {
+    color: rgb(255, 255, 255);
+    margin-bottom: 5px;
+}
+
+.elements .links .icon hr:first-child {
+    margin-top: 5px;
+    width: 100%;
+}
+
+.elements .links .icon hr:nth-child(2) {
+    width: 60%;
+    transition: 0.5s;
+}
+
+.elements .links:hover .icon hr:nth-child(2) {
+    width: 100%;
+}
+
+.elements .links .icon hr:last-child {
+    width: 100%;
+}
+
+.elements .social {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 125px;
+}
+
+.elements .social li:nth-child(2),
+.elements .social li:nth-child(3) {
+    display: flex;
+    justify-content: center;
+}
+
+.elements .social .circle {
+    display: flex;
+    align-items: center;
+    border: 1px solid white;
+    width: 23px;
+    height: 23px;
+    border-radius: 100%;
+    justify-content: center;
+}
+
+.fa-facebook-f,
+.fa-brands.fa-x-twitter,
+.fa-brands.fa-instagram,
+.fa-solid.fa-question,
+.fa-solid.fa-share,
+.fa-solid.fa-cart-shopping {
+    color: white;
+    font-size: 15px;
+}
+
+.elements .midline {
+    background-color: #ffffff;
+    width: 45%;
+}
+
+.elements .second-half {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.elements .cart {
+    margin-top: 25px;
+}
+
+.elements .contact-us {
+    list-style-type: none;
+    transform: rotate(-90deg);
+    width: 80px;
+}
+
+.elements .help-share {
+
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 70px;
+    margin-bottom: 45%;
+}
+
+
+.grid .logo-and-info {
+    position: relative;
+    grid-row: 2 /span 5;
+    grid-column: 1/ span 7;
+}
+
+.grid .logo-and-info .container {
+    position: absolute;
+    top: 50px;
+    margin-right: 40px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: inherit;
+}
+
+.grid .logo-and-info .logo {
+    width: fit-content;
+}
+
+.grid .logo-and-info .logo img {
+    width: 320px;
+    height: auto;
+}
+
+.grid .logo-and-info .info pre {
+    font-family: "Cairo", sans-serif;
+    font-size: 12px;
+    text-align: right;
+    margin-top: 30px;
+    color: white;
+    width: fit-content;
+}
+
+
+.grid .logo-and-info a.button {
+    position: absolute;
+    background-color: #00338D;
+    border-radius: 36px;
+    padding: 13px 30px;
+    font-size: 12px;
+    bottom: 40%;
+    left: -6%;
+}
+
+.left-side {
+    position: relative;
+    width: 70%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.left-side .container {
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    height: inherit;
+}
+
+.left-side .container .waves {
+    position: absolute;
+    top: -365px;
+    left: 170px;
+    z-index: -1;
+}
+
+.left-side .container .waves img {
+    width: 660px;
+    height: auto;
+}
+
+.left-side .container .food {
+    transform: rotate(20deg);
+    position: absolute;
+    top: -210px;
+    left: -620px;
+    opacity: 50%;
+    z-index: -2;
+}
+
+.left-side .container .food img {
+    width: 1100px;
+    height: auto;
+}
+
+.left-side .container .clouds {
+    position: absolute;
+    bottom: -3px;
+    z-index: 0;
+}
+
+.left-side .container .clouds img {
+    width: 593px;
+    height: auto;
+}
+
+.left-side .container .delivary {
+    position: absolute;
+    left: 200px;
+    bottom: -3px;
+    z-index: -1;
+}
+
+.left-side .container .delivary img {
+    width: 460px;
+    height: auto;
+}
